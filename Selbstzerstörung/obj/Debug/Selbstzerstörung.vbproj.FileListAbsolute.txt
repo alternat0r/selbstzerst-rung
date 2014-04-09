@@ -1,0 +1,2 @@
+C:\Users\alternat0r\AppData\Local\Temporary Projects\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe.config
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\Selbstzerstörung\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe.config
