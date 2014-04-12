@@ -1,2 +1,15 @@
 C:\Users\alternat0r\AppData\Local\Temporary Projects\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe.config
 C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\Selbstzerstörung\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe.config
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe.config
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\bin\Debug\Selbstzerstörung.exe
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\bin\Debug\Selbstzerstörung.pdb
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\bin\Debug\Selbstzerstörung.xml
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.frmMain.resources
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.Resources.resources
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.vbproj.GenerateResource.Cache
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.exe
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.xml
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.pdb
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.frmSetting.resources
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.frmAbout.resources
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.frmEula.resources
