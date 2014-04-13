@@ -38,10 +38,6 @@
         frmSetting.ShowDialog()
     End Sub
 
-    Private Sub btnTips_Click(sender As Object, e As EventArgs) Handles btnTips.Click
-        MsgBox("This Window will be popup everytime you logon, resume from hibernate or unlock your Windows." & vbCrLf & vbCrLf & "WARNING! If you are NOT checked in within 48 hours, all your data will be lost.", MsgBoxStyle.Information, szTitle)
-    End Sub
-
     Private Sub menuExit_Click(sender As Object, e As EventArgs) Handles menuExit.Click
         End
     End Sub
@@ -75,6 +71,21 @@
     Private Sub menuCheckin_Click(sender As Object, e As EventArgs) Handles menuCheckin.Click
         If txtKey.Text = My.Settings.sKey Then
             MsgBox("Checked-in", MsgBoxStyle.Information, szTitle)
+        End If
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        txtKey.Text = ""
+        txtKey.Focus()
+    End Sub
+
+    Private Sub btnTips_Click(sender As Object, e As EventArgs) Handles btnTips.Click
+        MsgBox("This Window will be popup everytime you logon, resume from hibernate or unlock your Windows." & vbCrLf & vbCrLf & "WARNING! If you are NOT checked in within 48 hours, all your data will be lost.", MsgBoxStyle.Information, szTitle)
+    End Sub
+
+    Private Sub PrivacyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrivacyToolStripMenuItem.Click
+        If MsgBox("This will open up web browser to read our User Privacy statement. Do you want to continue?", MsgBoxStyle.Information + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            System.Diagnostics.Process.Start("http://www.data0.net")
         End If
     End Sub
 End Class

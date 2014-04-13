@@ -23,7 +23,6 @@ Partial Class frmMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnTips = New System.Windows.Forms.Button()
         Me.txtKey = New System.Windows.Forms.MaskedTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,6 +34,8 @@ Partial Class frmMain
         Me.menuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.sbStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.btnTips = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -42,7 +43,6 @@ Partial Class frmMain
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.btnTips)
         Me.GroupBox1.Controls.Add(Me.txtKey)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
         Me.GroupBox1.Name = "GroupBox1"
@@ -50,24 +50,13 @@ Partial Class frmMain
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'btnTips
-        '
-        Me.btnTips.Font = New System.Drawing.Font("Arial Narrow", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTips.ForeColor = System.Drawing.Color.Gray
-        Me.btnTips.Location = New System.Drawing.Point(343, 20)
-        Me.btnTips.Name = "btnTips"
-        Me.btnTips.Size = New System.Drawing.Size(53, 46)
-        Me.btnTips.TabIndex = 6
-        Me.btnTips.Text = "?"
-        Me.btnTips.UseVisualStyleBackColor = True
-        '
         'txtKey
         '
         Me.txtKey.Font = New System.Drawing.Font("Calibri", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtKey.Location = New System.Drawing.Point(20, 19)
         Me.txtKey.Name = "txtKey"
         Me.txtKey.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtKey.Size = New System.Drawing.Size(317, 47)
+        Me.txtKey.Size = New System.Drawing.Size(387, 47)
         Me.txtKey.TabIndex = 5
         Me.txtKey.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -90,7 +79,7 @@ Partial Class frmMain
         'menuCheckin
         '
         Me.menuCheckin.Name = "menuCheckin"
-        Me.menuCheckin.Size = New System.Drawing.Size(152, 22)
+        Me.menuCheckin.Size = New System.Drawing.Size(122, 22)
         Me.menuCheckin.Text = "Check-in"
         '
         'menuAbout
@@ -109,25 +98,25 @@ Partial Class frmMain
         'PrivacyToolStripMenuItem
         '
         Me.PrivacyToolStripMenuItem.Name = "PrivacyToolStripMenuItem"
-        Me.PrivacyToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.PrivacyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PrivacyToolStripMenuItem.Text = "Privacy"
         '
         'menuSettings
         '
         Me.menuSettings.Name = "menuSettings"
-        Me.menuSettings.Size = New System.Drawing.Size(152, 22)
+        Me.menuSettings.Size = New System.Drawing.Size(122, 22)
         Me.menuSettings.Text = "&Settings"
         '
         'menuExit
         '
         Me.menuExit.Name = "menuExit"
-        Me.menuExit.Size = New System.Drawing.Size(152, 22)
+        Me.menuExit.Size = New System.Drawing.Size(122, 22)
         Me.menuExit.Text = "E&xit"
         '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 119)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 150)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(437, 22)
         Me.StatusStrip1.TabIndex = 4
@@ -139,11 +128,31 @@ Partial Class frmMain
         Me.sbStatus.Size = New System.Drawing.Size(39, 17)
         Me.sbStatus.Text = "Ready"
         '
+        'btnClear
+        '
+        Me.btnClear.Location = New System.Drawing.Point(269, 117)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 8
+        Me.btnClear.Text = "&Clear"
+        Me.btnClear.UseVisualStyleBackColor = True
+        '
+        'btnTips
+        '
+        Me.btnTips.Location = New System.Drawing.Point(350, 116)
+        Me.btnTips.Name = "btnTips"
+        Me.btnTips.Size = New System.Drawing.Size(75, 23)
+        Me.btnTips.TabIndex = 9
+        Me.btnTips.Text = "&Help"
+        Me.btnTips.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(437, 141)
+        Me.ClientSize = New System.Drawing.Size(437, 172)
+        Me.Controls.Add(Me.btnTips)
+        Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
@@ -169,11 +178,12 @@ Partial Class frmMain
     Friend WithEvents menuExit As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuCheckin As System.Windows.Forms.ToolStripMenuItem
     Public WithEvents txtKey As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents btnTips As System.Windows.Forms.Button
     Friend WithEvents menuAbout As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents menuAbout2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PrivacyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents sbStatus As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents btnClear As System.Windows.Forms.Button
+    Friend WithEvents btnTips As System.Windows.Forms.Button
 
 End Class
