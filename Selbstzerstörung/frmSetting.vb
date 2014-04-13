@@ -88,4 +88,37 @@
             txtKey.PasswordChar = "*"
         End If
     End Sub
+
+    Private Sub lvSoftware_ItemChecked(sender As Object, e As ItemCheckedEventArgs) Handles lvSoftware.ItemChecked
+        'MsgBox(e.Item.Index)
+
+    End Sub
+
+    Private Sub lvSoftware_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lvSoftware.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub TickSelectedItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TickSelectedItemToolStripMenuItem.Click
+        lvSoftware.Items(lvSoftware.FocusedItem.Index).Checked = True
+    End Sub
+
+    Private Sub UntickSelectedItemToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UntickSelectedItemToolStripMenuItem.Click
+        lvSoftware.Items(lvSoftware.FocusedItem.Index).Checked = False
+    End Sub
+
+    Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+        Dim i As Integer
+
+        For i = 0 To lvSoftware.Items.Count - 1
+            lvSoftware.Items(i).Checked = True
+        Next
+    End Sub
+
+    Private Sub DeselectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeselectAllToolStripMenuItem.Click
+        Dim i As Integer
+
+        For i = 0 To lvSoftware.Items.Count - 1
+            lvSoftware.Items(i).Checked = False
+        Next
+    End Sub
 End Class
