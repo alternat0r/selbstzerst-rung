@@ -10,4 +10,19 @@ Module modWipeStyle
         End If
         Return Nothing
     End Function
+
+    Public Function using_zero(obj As String)
+
+        Dim di As New DirectoryInfo(obj)
+        ' Get a reference to each file in that directory. 
+        Dim fiArr As FileInfo() = di.GetFiles()
+        ' Display the names and sizes of the files. 
+        Dim f As FileInfo
+
+        For Each f In fiArr
+            If f.Length = 0 Then
+                f.Delete()
+            End If
+        Next
+    End Function
 End Module
