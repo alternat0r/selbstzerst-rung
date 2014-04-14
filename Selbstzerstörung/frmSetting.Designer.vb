@@ -53,11 +53,15 @@ Partial Class frmSetting
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ctxSchedule = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.ctxSoftwareName.SuspendLayout()
+        Me.ctxSchedule.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -204,6 +208,7 @@ Partial Class frmSetting
         '
         Me.lvSchedule.CheckBoxes = True
         Me.lvSchedule.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
+        Me.lvSchedule.ContextMenuStrip = Me.ctxSchedule
         Me.lvSchedule.FullRowSelect = True
         Me.lvSchedule.GridLines = True
         Me.lvSchedule.Location = New System.Drawing.Point(7, 20)
@@ -282,7 +287,7 @@ Partial Class frmSetting
         '
         Me.ctxSoftwareName.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TickSelectedItemToolStripMenuItem, Me.UntickSelectedItemToolStripMenuItem, Me.ToolStripSeparator1, Me.SelectAllToolStripMenuItem, Me.DeselectAllToolStripMenuItem})
         Me.ctxSoftwareName.Name = "ctxSoftwareName"
-        Me.ctxSoftwareName.Size = New System.Drawing.Size(182, 120)
+        Me.ctxSoftwareName.Size = New System.Drawing.Size(182, 98)
         '
         'TickSelectedItemToolStripMenuItem
         '
@@ -322,6 +327,24 @@ Partial Class frmSetting
         Me.Label2.Text = "This part allow you to destroy certain software installed on your machine. Tick a" & _
     "ny listed software to enable."
         '
+        'ctxSchedule
+        '
+        Me.ctxSchedule.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveSelectedToolStripMenuItem})
+        Me.ctxSchedule.Name = "ctxSchedule"
+        Me.ctxSchedule.Size = New System.Drawing.Size(165, 70)
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.AddToolStripMenuItem.Text = "Add"
+        '
         'frmSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -344,6 +367,7 @@ Partial Class frmSetting
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.ctxSoftwareName.ResumeLayout(False)
+        Me.ctxSchedule.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -377,4 +401,7 @@ Partial Class frmSetting
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SelectAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DeselectAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ctxSchedule As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents AddToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RemoveSelectedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

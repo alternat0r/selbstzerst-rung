@@ -121,4 +121,8 @@
             lvSoftware.Items(i).Checked = False
         Next
     End Sub
+
+    Private Sub ctxSoftwareName_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ctxSoftwareName.Opening
+
+    End Sub
 End Class
