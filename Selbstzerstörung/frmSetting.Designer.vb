@@ -41,6 +41,9 @@ Partial Class frmSetting
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ctxSchedule = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -53,15 +56,12 @@ Partial Class frmSetting
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ctxSchedule = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.RemoveSelectedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.ctxSchedule.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.ctxSoftwareName.SuspendLayout()
-        Me.ctxSchedule.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -78,7 +78,7 @@ Partial Class frmSetting
         '
         Me.cmbWipeStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbWipeStyle.FormattingEnabled = True
-        Me.cmbWipeStyle.Items.AddRange(New Object() {"Using sdelete (Random)", "Nato Standard (7x)", "Peter Gutmann (35x)"})
+        Me.cmbWipeStyle.Items.AddRange(New Object() {"Using sdelete (Random)", "Using random data (1x)", "Nato Standard (7x)", "Peter Gutmann (35x)"})
         Me.cmbWipeStyle.Location = New System.Drawing.Point(7, 20)
         Me.cmbWipeStyle.Name = "cmbWipeStyle"
         Me.cmbWipeStyle.Size = New System.Drawing.Size(331, 21)
@@ -233,6 +233,24 @@ Partial Class frmSetting
         Me.ColumnHeader3.Text = "Check-in Time"
         Me.ColumnHeader3.Width = 100
         '
+        'ctxSchedule
+        '
+        Me.ctxSchedule.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveSelectedToolStripMenuItem})
+        Me.ctxSchedule.Name = "ctxSchedule"
+        Me.ctxSchedule.Size = New System.Drawing.Size(165, 48)
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.AddToolStripMenuItem.Text = "Add"
+        '
+        'RemoveSelectedToolStripMenuItem
+        '
+        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
+        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
+        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Button1)
@@ -327,24 +345,6 @@ Partial Class frmSetting
         Me.Label2.Text = "This part allow you to destroy certain software installed on your machine. Tick a" & _
     "ny listed software to enable."
         '
-        'ctxSchedule
-        '
-        Me.ctxSchedule.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem, Me.RemoveSelectedToolStripMenuItem})
-        Me.ctxSchedule.Name = "ctxSchedule"
-        Me.ctxSchedule.Size = New System.Drawing.Size(165, 70)
-        '
-        'RemoveSelectedToolStripMenuItem
-        '
-        Me.RemoveSelectedToolStripMenuItem.Name = "RemoveSelectedToolStripMenuItem"
-        Me.RemoveSelectedToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.RemoveSelectedToolStripMenuItem.Text = "Remove Selected"
-        '
-        'AddToolStripMenuItem
-        '
-        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.AddToolStripMenuItem.Text = "Add"
-        '
         'frmSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -365,9 +365,9 @@ Partial Class frmSetting
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        Me.ctxSchedule.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.ctxSoftwareName.ResumeLayout(False)
-        Me.ctxSchedule.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

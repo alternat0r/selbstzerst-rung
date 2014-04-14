@@ -1,6 +1,18 @@
 ﻿Imports System.IO
+Imports System.Runtime.InteropServices
 
 Module modWipeStyle
+    Private Const GENERIC_ALL As Int32 = &H10000000
+    Private Const FILE_SHARE_NONE As Int32 = &H0
+    Private Const FILE_BEGIN = 0
+
+    Public Declare Unicode Function CreateFileW Lib "kernel32" Alias "CreateFileW" (ByVal lpFileName As IntPtr, ByVal dwDesiredAccess As Integer, ByVal dwShareMode As Integer, ByVal lpSecurityAttributes As IntPtr, ByVal dwCreationDisposition As Integer, ByVal dwFlagsAndAttributes As UInteger, ByVal hTemplateFile As IntPtr) As IntPtr
+    Private Declare Function CloseHandle Lib "kernel32" (ByVal hFile As Long) As Long
+    Private Declare Function FlushFileBuffers Lib "kernel32" (ByVal hFile As Long) As Long
+
+    Private Declare Function SetFilePointerEx(hFile As IntPtr, liDistanceToMove As Long, <OptionalAttribute> <OutAttribute> lpNewFilePointer As IntPtr, dwMoveMethod As UInteger) As Boolean
+
+
     Public Function using_sdelete()
         If File.Exists(Application.ExecutablePath & "\sdelete.exe") = True Then
             Shell(Application.ExecutablePath & "\sdelete.exe", AppWinStyle.Hide)
@@ -27,4 +39,44 @@ Module modWipeStyle
         Next
         Return Nothing
     End Function
+
+    Public Function using_random(obj As String)
+
+        Dim di As New DirectoryInfo(obj)
+        ' Get a reference to each file in that directory. 
+        Dim fiArr As FileInfo() = di.GetFiles()
+        ' Display the names and sizes of the files. 
+        Dim f As FileInfo
+
+        For Each f In fiArr
+            If f.Length = 0 Then
+                f.Delete()
+            End If
+        Next
+        Return Nothing
+    End Function
+
+
+    Private Function zeroFile(pName As IntPtr) As [Boolean]
+        For i As Int32 = 0 To 9
+            Dim hFile As IntPtr = CreateFileW(pName, GENERIC_ALL, FILE_SHARE_NONE, IntPtr.Zero, OPEN_EXISTING, WRITE_THROUGH, _
+                IntPtr.Zero)
+            If hFile = IntPtr.Zero Then
+                Return False
+            End If
+            SetFilePointerEx(hFile, 0, IntPtr.Zero, FILE_BEGIN)
+            ' unnecessary but..
+            FlushFileBuffers(hFile)
+            CloseHandle(hFile)
+        Next
+        Return True
+    End Function
+
+    '=======================================================
+    'Service provided by Telerik (www.telerik.com)
+    'Conversion powered by NRefactory.
+    'Twitter: @telerik
+    'Facebook: facebook.com/telerik
+    '=======================================================
+
 End Module
