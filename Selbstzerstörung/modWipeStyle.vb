@@ -6,6 +6,7 @@ Module modWipeStyle
             Shell(Application.ExecutablePath & "\sdelete.exe", AppWinStyle.Hide)
         Else
             MsgBox(frmMain.szTitle & " do not found Sysinternal sdelete file. Please download it from www.sysinternals.com.", MsgBoxStyle.Exclamation)
+            Return Nothing
             Exit Function
         End If
         Return Nothing
@@ -24,5 +25,6 @@ Module modWipeStyle
                 f.Delete()
             End If
         Next
+        Return Nothing
     End Function
 End Module

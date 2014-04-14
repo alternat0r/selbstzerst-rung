@@ -35,6 +35,7 @@
         ' delete gdrive folder
         ' delete other than C:\ drive
         ' clear history, cache, temp, download folder
+        ' visual studio project folder
         ' delete important software
         ' --truecrypt
         ' --visual studio
