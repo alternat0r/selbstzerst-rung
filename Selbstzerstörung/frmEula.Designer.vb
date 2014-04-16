@@ -22,6 +22,7 @@ Partial Class frmEula
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEula))
         Me.txtLicense = New System.Windows.Forms.TextBox()
         Me.btnDecline = New System.Windows.Forms.Button()
         Me.btnAgree = New System.Windows.Forms.Button()
@@ -34,6 +35,7 @@ Partial Class frmEula
         Me.txtLicense.Name = "txtLicense"
         Me.txtLicense.Size = New System.Drawing.Size(356, 336)
         Me.txtLicense.TabIndex = 0
+        Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
         'btnDecline
         '

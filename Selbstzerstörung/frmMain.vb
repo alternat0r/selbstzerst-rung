@@ -11,6 +11,9 @@
             frmEula.ShowDialog()
         End If
 
+        ' to do:
+        '   - add command line support
+
         ' ||Requirement||
         ' must be running with administrator priv.
 
