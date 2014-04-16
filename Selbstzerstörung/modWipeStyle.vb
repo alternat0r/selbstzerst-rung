@@ -65,11 +65,26 @@ Module modWipeStyle
         End If
     End Function
 
-    '=======================================================
-    'Service provided by Telerik (www.telerik.com)
-    'Conversion powered by NRefactory.
-    'Twitter: @telerik
-    'Facebook: facebook.com/telerik
-    '=======================================================
+    Private Function using_overwrite_30(filename As String)
+        For a As Integer = 0 To 29
+            If System.IO.File.Exists(filename) = True Then
+                Dim objWriter As New System.IO.StreamWriter(filename, False)
+                objWriter.WriteLine(rnd_number(100, 10000))
+                objWriter.Close()
+            End If
+        Next
+        Return Nothing
+    End Function
+
+    Private Function using_heavy_wipe(filename As String)
+        For a As Integer = 0 To 100
+            If System.IO.File.Exists(filename) = True Then
+                Dim objWriter As New System.IO.StreamWriter(filename, False)
+                objWriter.WriteLine(RandomString(rnd_number(100000, 100000000)))
+                objWriter.Close()
+            End If
+        Next
+        Return Nothing
+    End Function
 
 End Module
