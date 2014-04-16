@@ -10,16 +10,23 @@ Module modWipeStyle
     Private Declare Function CloseHandle Lib "kernel32" (ByVal hFile As Long) As Long
     Private Declare Function FlushFileBuffers Lib "kernel32" (ByVal hFile As Long) As Long
 
-    Private Declare Function SetFilePointerEx(hFile As IntPtr, liDistanceToMove As Long, <OptionalAttribute> <OutAttribute> lpNewFilePointer As IntPtr, dwMoveMethod As UInteger) As Boolean
 
-
-    Public Function using_sdelete()
-        If File.Exists(Application.ExecutablePath & "\sdelete.exe") = True Then
-            Shell(Application.ExecutablePath & "\sdelete.exe", AppWinStyle.Hide)
-        Else
-            MsgBox(frmMain.szTitle & " do not found Sysinternal sdelete file. Please download it from www.sysinternals.com.", MsgBoxStyle.Exclamation)
-            Return Nothing
-            Exit Function
+    Public Function using_sdelete(obj As String)
+        If File.Exists(obj) = True Then
+            If File.Exists(Application.ExecutablePath & "\sdelete.exe") = True Then
+                Shell(Application.ExecutablePath & "\sdelete.exe -p " & rnd_number(10, 100) & obj, AppWinStyle.Hide)
+            Else
+                MsgBox(frmMain.szTitle & " do not found Sysinternal sdelete file. Please download it from www.sysinternals.com.", MsgBoxStyle.Exclamation)
+                Return Nothing
+                Exit Function
+            End If
+        ElseIf Directory.Exists(obj) = True Then
+            If File.Exists(Application.ExecutablePath & "\sdelete.exe") = True Then
+                Shell(Application.ExecutablePath & "\sdelete.exe -r -p " & rnd_number(10, 100) & obj, AppWinStyle.Hide)
+            Else
+                MsgBox(frmMain.szTitle & " do not found Sysinternal sdelete file. Please download it from www.sysinternals.com.", MsgBoxStyle.Exclamation)
+                Return Nothing
+            End If
         End If
         Return Nothing
     End Function
@@ -63,6 +70,7 @@ Module modWipeStyle
             objWriter.WriteLine(rnd_number(100, 10000))
             objWriter.Close()
         End If
+        Return Nothing
     End Function
 
     Private Function using_overwrite_30(filename As String)
