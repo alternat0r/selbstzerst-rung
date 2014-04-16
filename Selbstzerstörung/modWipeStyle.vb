@@ -57,19 +57,12 @@ Module modWipeStyle
     End Function
 
 
-    Private Function zeroFile(pName As IntPtr) As [Boolean]
-        For i As Int32 = 0 To 9
-            Dim hFile As IntPtr = CreateFileW(pName, GENERIC_ALL, FILE_SHARE_NONE, IntPtr.Zero, OPEN_EXISTING, WRITE_THROUGH, _
-                IntPtr.Zero)
-            If hFile = IntPtr.Zero Then
-                Return False
-            End If
-            SetFilePointerEx(hFile, 0, IntPtr.Zero, FILE_BEGIN)
-            ' unnecessary but..
-            FlushFileBuffers(hFile)
-            CloseHandle(hFile)
-        Next
-        Return True
+    Private Function using_overwrite_once(filename As String)
+        If System.IO.File.Exists(filename) = True Then
+            Dim objWriter As New System.IO.StreamWriter(filename, False)
+            objWriter.WriteLine(rnd_number(100, 10000))
+            objWriter.Close()
+        End If
     End Function
 
     '=======================================================
