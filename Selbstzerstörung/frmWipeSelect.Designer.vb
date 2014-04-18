@@ -23,7 +23,7 @@ Partial Class frmWipeSelect
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWipeSelect))
-        Me.lvSoftware = New System.Windows.Forms.ListView()
+        Me.lvObject = New System.Windows.Forms.ListView()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label1 = New System.Windows.Forms.Label()
@@ -31,21 +31,22 @@ Partial Class frmWipeSelect
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'lvSoftware
+        'lvObject
         '
-        Me.lvSoftware.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.lvObject.AllowDrop = True
+        Me.lvObject.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lvSoftware.CheckBoxes = True
-        Me.lvSoftware.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader1})
-        Me.lvSoftware.FullRowSelect = True
-        Me.lvSoftware.GridLines = True
-        Me.lvSoftware.Location = New System.Drawing.Point(12, 12)
-        Me.lvSoftware.Name = "lvSoftware"
-        Me.lvSoftware.Size = New System.Drawing.Size(530, 198)
-        Me.lvSoftware.TabIndex = 3
-        Me.lvSoftware.UseCompatibleStateImageBehavior = False
-        Me.lvSoftware.View = System.Windows.Forms.View.Details
+        Me.lvObject.CheckBoxes = True
+        Me.lvObject.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4, Me.ColumnHeader1})
+        Me.lvObject.FullRowSelect = True
+        Me.lvObject.GridLines = True
+        Me.lvObject.Location = New System.Drawing.Point(12, 12)
+        Me.lvObject.Name = "lvObject"
+        Me.lvObject.Size = New System.Drawing.Size(530, 198)
+        Me.lvObject.TabIndex = 3
+        Me.lvObject.UseCompatibleStateImageBehavior = False
+        Me.lvObject.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader4
         '
@@ -95,7 +96,7 @@ Partial Class frmWipeSelect
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lvSoftware)
+        Me.Controls.Add(Me.lvObject)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmWipeSelect"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -103,7 +104,7 @@ Partial Class frmWipeSelect
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents lvSoftware As System.Windows.Forms.ListView
+    Friend WithEvents lvObject As System.Windows.Forms.ListView
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader1 As System.Windows.Forms.ColumnHeader
     Friend WithEvents Label1 As System.Windows.Forms.Label

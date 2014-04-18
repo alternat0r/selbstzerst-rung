@@ -23,21 +23,10 @@ Partial Class frmEula
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEula))
-        Me.txtLicense = New System.Windows.Forms.TextBox()
         Me.btnDecline = New System.Windows.Forms.Button()
         Me.btnAgree = New System.Windows.Forms.Button()
+        Me.txtLicense = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'txtLicense
-        '
-        Me.txtLicense.Location = New System.Drawing.Point(12, 12)
-        Me.txtLicense.Multiline = True
-        Me.txtLicense.Name = "txtLicense"
-        Me.txtLicense.ReadOnly = True
-        Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtLicense.Size = New System.Drawing.Size(356, 336)
-        Me.txtLicense.TabIndex = 0
-        Me.txtLicense.Text = resources.GetString("txtLicense.Text")
         '
         'btnDecline
         '
@@ -57,14 +46,26 @@ Partial Class frmEula
         Me.btnAgree.Text = "&Agree"
         Me.btnAgree.UseVisualStyleBackColor = True
         '
+        'txtLicense
+        '
+        Me.txtLicense.BackColor = System.Drawing.Color.White
+        Me.txtLicense.Location = New System.Drawing.Point(13, 13)
+        Me.txtLicense.Multiline = True
+        Me.txtLicense.Name = "txtLicense"
+        Me.txtLicense.ReadOnly = True
+        Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtLicense.Size = New System.Drawing.Size(355, 337)
+        Me.txtLicense.TabIndex = 3
+        Me.txtLicense.Text = resources.GetString("txtLicense.Text")
+        '
         'frmEula
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(380, 391)
+        Me.Controls.Add(Me.txtLicense)
         Me.Controls.Add(Me.btnAgree)
         Me.Controls.Add(Me.btnDecline)
-        Me.Controls.Add(Me.txtLicense)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
@@ -74,7 +75,7 @@ Partial Class frmEula
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents txtLicense As System.Windows.Forms.TextBox
     Friend WithEvents btnDecline As System.Windows.Forms.Button
     Friend WithEvents btnAgree As System.Windows.Forms.Button
+    Friend WithEvents txtLicense As System.Windows.Forms.TextBox
 End Class
