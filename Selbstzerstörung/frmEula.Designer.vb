@@ -71,6 +71,7 @@ Partial Class frmEula
         Me.MinimizeBox = False
         Me.Name = "frmEula"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "License"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

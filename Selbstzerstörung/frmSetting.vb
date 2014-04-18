@@ -4,6 +4,8 @@
 
         cmbWipeStyle.SelectedIndex = My.Settings.sWipeStyle
         txtKey.Text = My.Settings.sKey
+
+        txtTimeCheckin.Text = My.Settings.sTimeCheckin
         
         If My.Settings.sShowKey = "1" Then
             chkShowKey.Checked = True
@@ -78,6 +80,7 @@
         My.Settings.sKeyForSetting = chkKeyForSetting.CheckState
         My.Settings.sEncryptConfig = chkEncryptConf.CheckState
         My.Settings.sSelfDestroy = chkSelfDestroy.CheckState
+        My.Settings.sTimeCheckin = txtTimeCheckin.Text
 
         MsgBox("Settings saved.", MsgBoxStyle.Information, frmMain.szTitle)
     End Sub

@@ -23,5 +23,8 @@
     <Setting Name="sLicense" Type="System.String" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="sTimeCheckin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">48</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

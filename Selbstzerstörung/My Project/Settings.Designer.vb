@@ -54,87 +54,99 @@ Namespace My
             End Get
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("qwerty")> _
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("qwerty")>  _
         Public Property sKey() As String
             Get
-                Return CType(Me("sKey"), String)
+                Return CType(Me("sKey"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sKey") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property sWipeStyle() As String
             Get
-                Return CType(Me("sWipeStyle"), String)
+                Return CType(Me("sWipeStyle"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sWipeStyle") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property sShowKey() As String
             Get
-                Return CType(Me("sShowKey"), String)
+                Return CType(Me("sShowKey"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sShowKey") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property sKeyForSetting() As String
             Get
-                Return CType(Me("sKeyForSetting"), String)
+                Return CType(Me("sKeyForSetting"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sKeyForSetting") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property sEncryptConfig() As String
             Get
-                Return CType(Me("sEncryptConfig"), String)
+                Return CType(Me("sEncryptConfig"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sEncryptConfig") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("1")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
         Public Property sSelfDestroy() As String
             Get
-                Return CType(Me("sSelfDestroy"), String)
+                Return CType(Me("sSelfDestroy"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sSelfDestroy") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
         Public Property sLicense() As String
             Get
-                Return CType(Me("sLicense"), String)
+                Return CType(Me("sLicense"),String)
             End Get
-            Set(value As String)
+            Set
                 Me("sLicense") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("48")>  _
+        Public Property sTimeCheckin() As String
+            Get
+                Return CType(Me("sTimeCheckin"),String)
+            End Get
+            Set
+                Me("sTimeCheckin") = value
             End Set
         End Property
     End Class

@@ -1,10 +1,8 @@
 ﻿Public Class frmMain
 
+    Dim i As Integer
+
     Public Const szTitle As String = "Selbstzerstorung"
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
-    End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If My.Settings.sLicense = "0" Then
@@ -57,23 +55,18 @@
         frmAbout.ShowDialog()
     End Sub
 
-    Private Sub txtKey_MaskInputRejected(sender As Object, e As MaskInputRejectedEventArgs) Handles txtKey.MaskInputRejected
-
-    End Sub
-
     Private Sub txtKey_TextChanged(sender As Object, e As EventArgs) Handles txtKey.TextChanged
-        If txtKey.Text = My.Settings.sKey Then
-            sbStatus.Text = "Check-in"
-            MsgBox("Checked-in", MsgBoxStyle.Information, szTitle)
-        Else
-            'MsgBox("false")
-            sbStatus.Text = "False"
-        End If
+        menuCheckin_Click(sender, e)
     End Sub
 
     Private Sub menuCheckin_Click(sender As Object, e As EventArgs) Handles menuCheckin.Click
         If txtKey.Text = My.Settings.sKey Then
+            i = 0
+            tmrCheckin.Start()
+            sbStatus.Text = "Check-in"
             MsgBox("Checked-in", MsgBoxStyle.Information, szTitle)
+        Else
+            sbStatus.Text = "False"
         End If
     End Sub
 
@@ -98,5 +91,18 @@
 
     Private Sub WipeSelectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WipeSelectToolStripMenuItem.Click
         btnWipeSelect_Click(sender, e)
+    End Sub
+
+    Private Sub tmrCheckin_Tick(sender As Object, e As EventArgs) Handles tmrCheckin.Tick
+
+        i = i + 1
+        Dim ts As TimeSpan = TimeSpan.FromSeconds(i)
+        Dim mydate As DateTime = New DateTime(ts.Ticks)
+        stCheckin.Text = "Last checked-in: " & mydate.ToString(("HH:mm:ss")) & " ago"
+    End Sub
+
+    Private Sub StopToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StopToolStripMenuItem.Click
+        tmrCheckin.Stop()
+        i = 0
     End Sub
 End Class

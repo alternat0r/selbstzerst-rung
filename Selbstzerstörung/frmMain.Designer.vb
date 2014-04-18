@@ -22,25 +22,29 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKey = New System.Windows.Forms.MaskedTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuCheckin = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.menuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuAbout2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrivacyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WipeSelectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuSettings = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.menuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.sbStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.stCheckin = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnTips = New System.Windows.Forms.Button()
         Me.btnWipeSelect = New System.Windows.Forms.Button()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.WipeSelectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tmrCheckin = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -76,7 +80,7 @@ Partial Class frmMain
         '
         'MenuToolStripMenuItem
         '
-        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCheckin, Me.ToolStripSeparator2, Me.menuAbout, Me.WipeSelectToolStripMenuItem, Me.menuSettings, Me.ToolStripSeparator1, Me.menuExit})
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCheckin, Me.StopToolStripMenuItem, Me.ToolStripSeparator2, Me.menuAbout, Me.WipeSelectToolStripMenuItem, Me.menuSettings, Me.ToolStripSeparator1, Me.menuExit})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
@@ -86,6 +90,17 @@ Partial Class frmMain
         Me.menuCheckin.Name = "menuCheckin"
         Me.menuCheckin.Size = New System.Drawing.Size(152, 22)
         Me.menuCheckin.Text = "Check-in"
+        '
+        'StopToolStripMenuItem
+        '
+        Me.StopToolStripMenuItem.Name = "StopToolStripMenuItem"
+        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StopToolStripMenuItem.Text = "S&top"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
         '
         'menuAbout
         '
@@ -106,11 +121,22 @@ Partial Class frmMain
         Me.PrivacyToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.PrivacyToolStripMenuItem.Text = "Privacy"
         '
+        'WipeSelectToolStripMenuItem
+        '
+        Me.WipeSelectToolStripMenuItem.Name = "WipeSelectToolStripMenuItem"
+        Me.WipeSelectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WipeSelectToolStripMenuItem.Text = "&Wipe Select"
+        '
         'menuSettings
         '
         Me.menuSettings.Name = "menuSettings"
         Me.menuSettings.Size = New System.Drawing.Size(152, 22)
         Me.menuSettings.Text = "&Settings"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'menuExit
         '
@@ -120,7 +146,7 @@ Partial Class frmMain
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbStatus})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.sbStatus, Me.stCheckin})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 150)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(437, 22)
@@ -132,6 +158,13 @@ Partial Class frmMain
         Me.sbStatus.Name = "sbStatus"
         Me.sbStatus.Size = New System.Drawing.Size(39, 17)
         Me.sbStatus.Text = "Ready"
+        '
+        'stCheckin
+        '
+        Me.stCheckin.Name = "stCheckin"
+        Me.stCheckin.Size = New System.Drawing.Size(383, 17)
+        Me.stCheckin.Spring = True
+        Me.stCheckin.Text = "Last checked-in:"
         '
         'btnClear
         '
@@ -160,21 +193,9 @@ Partial Class frmMain
         Me.btnWipeSelect.Text = "Wipe Select"
         Me.btnWipeSelect.UseVisualStyleBackColor = True
         '
-        'ToolStripSeparator1
+        'tmrCheckin
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
-        '
-        'WipeSelectToolStripMenuItem
-        '
-        Me.WipeSelectToolStripMenuItem.Name = "WipeSelectToolStripMenuItem"
-        Me.WipeSelectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.WipeSelectToolStripMenuItem.Text = "&Wipe Select"
+        Me.tmrCheckin.Interval = 1000
         '
         'frmMain
         '
@@ -221,5 +242,8 @@ Partial Class frmMain
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents WipeSelectToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents StopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents stCheckin As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents tmrCheckin As System.Windows.Forms.Timer
 
 End Class
