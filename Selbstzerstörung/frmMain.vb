@@ -91,4 +91,8 @@
             System.Diagnostics.Process.Start("http://www.data0.net")
         End If
     End Sub
+
+    Private Sub btnWipeSelect_Click(sender As Object, e As EventArgs) Handles btnWipeSelect.Click
+        frmWipeSelect.ShowDialog()
+    End Sub
 End Class

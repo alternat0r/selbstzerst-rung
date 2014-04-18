@@ -78,7 +78,7 @@ Partial Class frmSetting
         '
         Me.cmbWipeStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbWipeStyle.FormattingEnabled = True
-        Me.cmbWipeStyle.Items.AddRange(New Object() {"Using sdelete (Random)", "Using random data (1x)", "Nato Standard (7x)", "Peter Gutmann (35x)"})
+        Me.cmbWipeStyle.Items.AddRange(New Object() {"Using sdelete (Random)", "Using random data (1x)", "Nato Standard (7x)", "Peter Gutmann (35x)", "Heavy Wipe (101x)"})
         Me.cmbWipeStyle.Location = New System.Drawing.Point(7, 20)
         Me.cmbWipeStyle.Name = "cmbWipeStyle"
         Me.cmbWipeStyle.Size = New System.Drawing.Size(331, 21)

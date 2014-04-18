@@ -13,3 +13,4 @@ C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbs
 C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.exe
 C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.xml
 C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.pdb
+C:\Users\alternat0r\Documents\Visual Studio 2012\Projects\selbstzerst-rung\Selbstzerstörung\obj\Debug\Selbstzerstörung.frmWipeSelect.resources

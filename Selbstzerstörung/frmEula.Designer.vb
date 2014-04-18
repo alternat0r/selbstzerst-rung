@@ -33,6 +33,8 @@ Partial Class frmEula
         Me.txtLicense.Location = New System.Drawing.Point(12, 12)
         Me.txtLicense.Multiline = True
         Me.txtLicense.Name = "txtLicense"
+        Me.txtLicense.ReadOnly = True
+        Me.txtLicense.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtLicense.Size = New System.Drawing.Size(356, 336)
         Me.txtLicense.TabIndex = 0
         Me.txtLicense.Text = resources.GetString("txtLicense.Text")

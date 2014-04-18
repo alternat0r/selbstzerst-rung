@@ -36,6 +36,7 @@ Partial Class frmMain
         Me.sbStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnTips = New System.Windows.Forms.Button()
+        Me.btnWipeSelect = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -79,7 +80,7 @@ Partial Class frmMain
         'menuCheckin
         '
         Me.menuCheckin.Name = "menuCheckin"
-        Me.menuCheckin.Size = New System.Drawing.Size(122, 22)
+        Me.menuCheckin.Size = New System.Drawing.Size(152, 22)
         Me.menuCheckin.Text = "Check-in"
         '
         'menuAbout
@@ -98,19 +99,19 @@ Partial Class frmMain
         'PrivacyToolStripMenuItem
         '
         Me.PrivacyToolStripMenuItem.Name = "PrivacyToolStripMenuItem"
-        Me.PrivacyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PrivacyToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.PrivacyToolStripMenuItem.Text = "Privacy"
         '
         'menuSettings
         '
         Me.menuSettings.Name = "menuSettings"
-        Me.menuSettings.Size = New System.Drawing.Size(122, 22)
+        Me.menuSettings.Size = New System.Drawing.Size(152, 22)
         Me.menuSettings.Text = "&Settings"
         '
         'menuExit
         '
         Me.menuExit.Name = "menuExit"
-        Me.menuExit.Size = New System.Drawing.Size(122, 22)
+        Me.menuExit.Size = New System.Drawing.Size(152, 22)
         Me.menuExit.Text = "E&xit"
         '
         'StatusStrip1
@@ -146,11 +147,21 @@ Partial Class frmMain
         Me.btnTips.Text = "&Help"
         Me.btnTips.UseVisualStyleBackColor = True
         '
+        'btnWipeSelect
+        '
+        Me.btnWipeSelect.Location = New System.Drawing.Point(12, 117)
+        Me.btnWipeSelect.Name = "btnWipeSelect"
+        Me.btnWipeSelect.Size = New System.Drawing.Size(75, 23)
+        Me.btnWipeSelect.TabIndex = 10
+        Me.btnWipeSelect.Text = "Wipe Select"
+        Me.btnWipeSelect.UseVisualStyleBackColor = True
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(437, 172)
+        Me.Controls.Add(Me.btnWipeSelect)
         Me.Controls.Add(Me.btnTips)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.StatusStrip1)
@@ -185,5 +196,6 @@ Partial Class frmMain
     Friend WithEvents sbStatus As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnTips As System.Windows.Forms.Button
+    Friend WithEvents btnWipeSelect As System.Windows.Forms.Button
 
 End Class

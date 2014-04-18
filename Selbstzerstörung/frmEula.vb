@@ -1,7 +1,7 @@
 ﻿Public Class frmEula
 
     Private Sub frmEula_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtLicense.Text = ""
+        'txtLicense.Text = ""
 
     End Sub
 
