@@ -31,7 +31,9 @@ Partial Class frmAbout
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnOk
@@ -45,6 +47,7 @@ Partial Class frmAbout
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.LinkLabel1)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -79,7 +82,7 @@ Partial Class frmAbout
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 42)
+        Me.Label4.Location = New System.Drawing.Point(76, 51)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 13)
         Me.Label4.TabIndex = 3
@@ -88,7 +91,7 @@ Partial Class frmAbout
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 29)
+        Me.Label3.Location = New System.Drawing.Point(76, 38)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 13)
         Me.Label3.TabIndex = 2
@@ -97,7 +100,7 @@ Partial Class frmAbout
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 16)
+        Me.Label2.Location = New System.Drawing.Point(76, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 1
@@ -111,6 +114,15 @@ Partial Class frmAbout
         Me.Label1.Size = New System.Drawing.Size(229, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Copyright © 2014. alternat0r. Alll right reserved."
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Selbstzerstörung.My.Resources.Resources._48x48
+        Me.PictureBox1.Location = New System.Drawing.Point(19, 16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 50)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'frmAbout
         '
@@ -127,6 +139,7 @@ Partial Class frmAbout
         Me.Text = "About"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -138,4 +151,5 @@ Partial Class frmAbout
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

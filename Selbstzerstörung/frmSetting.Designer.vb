@@ -27,6 +27,9 @@ Partial Class frmSetting
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbWipeStyle = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtTimeCheckin = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.chkSelfDestroy = New System.Windows.Forms.CheckBox()
         Me.chkEncryptConf = New System.Windows.Forms.CheckBox()
         Me.chkKeyForSetting = New System.Windows.Forms.CheckBox()
@@ -57,9 +60,6 @@ Partial Class frmSetting
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtTimeCheckin = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -105,6 +105,33 @@ Partial Class frmSetting
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Security"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(261, 142)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(33, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "hours"
+        '
+        'txtTimeCheckin
+        '
+        Me.txtTimeCheckin.Location = New System.Drawing.Point(173, 139)
+        Me.txtTimeCheckin.Name = "txtTimeCheckin"
+        Me.txtTimeCheckin.Size = New System.Drawing.Size(82, 20)
+        Me.txtTimeCheckin.TabIndex = 7
+        Me.txtTimeCheckin.Text = "48"
+        Me.txtTimeCheckin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(10, 142)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(160, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Time left if user did not check-in:"
         '
         'chkSelfDestroy
         '
@@ -306,7 +333,7 @@ Partial Class frmSetting
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Software Name"
-        Me.ColumnHeader4.Width = 280
+        Me.ColumnHeader4.Width = 277
         '
         'ctxSoftwareName
         '
@@ -351,33 +378,6 @@ Partial Class frmSetting
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "This part allow you to destroy certain software installed on your machine. Tick a" & _
     "ny listed software to enable."
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(10, 142)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(160, 13)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Time left if user did not check-in:"
-        '
-        'txtTimeCheckin
-        '
-        Me.txtTimeCheckin.Location = New System.Drawing.Point(173, 139)
-        Me.txtTimeCheckin.Name = "txtTimeCheckin"
-        Me.txtTimeCheckin.Size = New System.Drawing.Size(82, 20)
-        Me.txtTimeCheckin.TabIndex = 7
-        Me.txtTimeCheckin.Text = "48"
-        Me.txtTimeCheckin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(261, 142)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(33, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "hours"
         '
         'frmSetting
         '
