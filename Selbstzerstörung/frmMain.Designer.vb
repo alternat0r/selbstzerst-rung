@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtKey = New System.Windows.Forms.MaskedTextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -37,6 +38,9 @@ Partial Class frmMain
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnTips = New System.Windows.Forms.Button()
         Me.btnWipeSelect = New System.Windows.Forms.Button()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.WipeSelectToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -72,7 +76,7 @@ Partial Class frmMain
         '
         'MenuToolStripMenuItem
         '
-        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCheckin, Me.menuAbout, Me.menuSettings, Me.menuExit})
+        Me.MenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.menuCheckin, Me.ToolStripSeparator2, Me.menuAbout, Me.WipeSelectToolStripMenuItem, Me.menuSettings, Me.ToolStripSeparator1, Me.menuExit})
         Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
         Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
         Me.MenuToolStripMenuItem.Text = "Menu"
@@ -156,6 +160,22 @@ Partial Class frmMain
         Me.btnWipeSelect.Text = "Wipe Select"
         Me.btnWipeSelect.UseVisualStyleBackColor = True
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        '
+        'WipeSelectToolStripMenuItem
+        '
+        Me.WipeSelectToolStripMenuItem.Name = "WipeSelectToolStripMenuItem"
+        Me.WipeSelectToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WipeSelectToolStripMenuItem.Text = "&Wipe Select"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,6 +187,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "frmMain"
@@ -197,5 +218,8 @@ Partial Class frmMain
     Friend WithEvents btnClear As System.Windows.Forms.Button
     Friend WithEvents btnTips As System.Windows.Forms.Button
     Friend WithEvents btnWipeSelect As System.Windows.Forms.Button
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents WipeSelectToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
 
 End Class

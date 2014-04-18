@@ -22,6 +22,7 @@ Partial Class frmWipeSelect
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWipeSelect))
         Me.lvSoftware = New System.Windows.Forms.ListView()
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -59,12 +60,12 @@ Partial Class frmWipeSelect
         'Label1
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(12, 213)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(213, 13)
+        Me.Label1.Size = New System.Drawing.Size(354, 40)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Drag and drop file or folder into this window."
+        Me.Label1.Text = "Drag and drop file or folder into this window. Wipe style will be use based on cu" & _
+    "rrent settings."
         '
         'btnClose
         '
@@ -95,11 +96,11 @@ Partial Class frmWipeSelect
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lvSoftware)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmWipeSelect"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Wipe Select"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents lvSoftware As System.Windows.Forms.ListView

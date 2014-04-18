@@ -23,6 +23,7 @@ Partial Class frmSetting
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSetting))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.cmbWipeStyle = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -56,6 +57,9 @@ Partial Class frmSetting
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtTimeCheckin = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -86,6 +90,9 @@ Partial Class frmSetting
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.txtTimeCheckin)
+        Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.chkSelfDestroy)
         Me.GroupBox2.Controls.Add(Me.chkEncryptConf)
         Me.GroupBox2.Controls.Add(Me.chkKeyForSetting)
@@ -94,7 +101,7 @@ Partial Class frmSetting
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 73)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(344, 139)
+        Me.GroupBox2.Size = New System.Drawing.Size(344, 171)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Security"
@@ -158,7 +165,7 @@ Partial Class frmSetting
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(590, 399)
+        Me.btnClose.Location = New System.Drawing.Point(590, 424)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
         Me.btnClose.TabIndex = 2
@@ -167,7 +174,7 @@ Partial Class frmSetting
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(509, 399)
+        Me.btnSave.Location = New System.Drawing.Point(509, 424)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 3
@@ -179,7 +186,7 @@ Partial Class frmSetting
         Me.GroupBox3.Controls.Add(Me.Button4)
         Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.lvSchedule)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 218)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 250)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(344, 163)
         Me.GroupBox3.TabIndex = 4
@@ -259,14 +266,14 @@ Partial Class frmSetting
         Me.GroupBox4.Controls.Add(Me.Label2)
         Me.GroupBox4.Location = New System.Drawing.Point(363, 13)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(302, 368)
+        Me.GroupBox4.Size = New System.Drawing.Size(302, 400)
         Me.GroupBox4.TabIndex = 5
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Pre-Listed Software"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(39, 336)
+        Me.Button1.Location = New System.Drawing.Point(40, 368)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(23, 23)
         Me.Button1.TabIndex = 4
@@ -275,7 +282,7 @@ Partial Class frmSetting
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(10, 336)
+        Me.Button2.Location = New System.Drawing.Point(11, 368)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(23, 23)
         Me.Button2.TabIndex = 3
@@ -291,7 +298,7 @@ Partial Class frmSetting
         Me.lvSoftware.GridLines = True
         Me.lvSoftware.Location = New System.Drawing.Point(10, 60)
         Me.lvSoftware.Name = "lvSoftware"
-        Me.lvSoftware.Size = New System.Drawing.Size(286, 270)
+        Me.lvSoftware.Size = New System.Drawing.Size(286, 302)
         Me.lvSoftware.TabIndex = 2
         Me.lvSoftware.UseCompatibleStateImageBehavior = False
         Me.lvSoftware.View = System.Windows.Forms.View.Details
@@ -345,17 +352,45 @@ Partial Class frmSetting
         Me.Label2.Text = "This part allow you to destroy certain software installed on your machine. Tick a" & _
     "ny listed software to enable."
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(10, 142)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(160, 13)
+        Me.Label3.TabIndex = 6
+        Me.Label3.Text = "Time left if user did not check-in:"
+        '
+        'txtTimeCheckin
+        '
+        Me.txtTimeCheckin.Location = New System.Drawing.Point(173, 139)
+        Me.txtTimeCheckin.Name = "txtTimeCheckin"
+        Me.txtTimeCheckin.Size = New System.Drawing.Size(82, 20)
+        Me.txtTimeCheckin.TabIndex = 7
+        Me.txtTimeCheckin.Text = "48"
+        Me.txtTimeCheckin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(261, 142)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(33, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "hours"
+        '
         'frmSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(677, 431)
+        Me.ClientSize = New System.Drawing.Size(677, 459)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmSetting"
@@ -404,4 +439,7 @@ Partial Class frmSetting
     Friend WithEvents ctxSchedule As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents AddToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents RemoveSelectedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtTimeCheckin As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

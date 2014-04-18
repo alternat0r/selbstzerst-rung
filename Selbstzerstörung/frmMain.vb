@@ -83,7 +83,7 @@
     End Sub
 
     Private Sub btnTips_Click(sender As Object, e As EventArgs) Handles btnTips.Click
-        MsgBox("This Window will be popup everytime you logon, resume from hibernate or unlock your Windows." & vbCrLf & vbCrLf & "WARNING! If you are NOT checked in within 48 hours, all your data will be lost.", MsgBoxStyle.Information, szTitle)
+        MsgBox("This Window will be popup everytime you logon, resume from hibernate or unlock your Windows." & vbCrLf & vbCrLf & "WARNING! If you are NOT checked in within " & frmSetting.txtTimeCheckin.Text & " hours, all your data will be lost.", MsgBoxStyle.Information, szTitle)
     End Sub
 
     Private Sub PrivacyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrivacyToolStripMenuItem.Click
@@ -94,5 +94,9 @@
 
     Private Sub btnWipeSelect_Click(sender As Object, e As EventArgs) Handles btnWipeSelect.Click
         frmWipeSelect.ShowDialog()
+    End Sub
+
+    Private Sub WipeSelectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WipeSelectToolStripMenuItem.Click
+        btnWipeSelect_Click(sender, e)
     End Sub
 End Class

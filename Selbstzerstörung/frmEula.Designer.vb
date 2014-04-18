@@ -65,6 +65,7 @@ Partial Class frmEula
         Me.Controls.Add(Me.btnAgree)
         Me.Controls.Add(Me.btnDecline)
         Me.Controls.Add(Me.txtLicense)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmEula"

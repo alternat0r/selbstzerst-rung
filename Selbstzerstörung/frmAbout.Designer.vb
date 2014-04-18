@@ -22,14 +22,15 @@ Partial Class frmAbout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
         Me.btnOk = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,41 +57,14 @@ Partial Class frmAbout
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'Label1
+        'Label5
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(16, 112)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(229, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Copyright © 2014. alternat0r. Alll right reserved."
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Selbstzerstorung"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 29)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(122, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Extra secure file deletion"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(16, 42)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Version 0.1a"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(16, 76)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Email:"
         '
         'LinkLabel1
         '
@@ -102,14 +76,41 @@ Partial Class frmAbout
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "alternator99@gmail.com"
         '
-        'Label5
+        'Label4
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(16, 76)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Email:"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 42)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Version 0.1a"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(16, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(122, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Extra secure file deletion"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(85, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Selbstzerstorung"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(16, 112)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(229, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Copyright © 2014. alternat0r. Alll right reserved."
         '
         'frmAbout
         '
@@ -118,6 +119,7 @@ Partial Class frmAbout
         Me.ClientSize = New System.Drawing.Size(340, 190)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnOk)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmAbout"
