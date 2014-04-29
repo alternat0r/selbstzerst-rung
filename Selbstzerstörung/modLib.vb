@@ -30,6 +30,13 @@ Module modLib
         Return Nothing
     End Function
 
+    Public Function rm_vmware()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        rm(szProgramFilesPath & "\VMware\")
+        Return Nothing
+    End Function
+
     Public Function rm(path As String)
         Directory.Delete(path, True)
         Return Nothing
