@@ -17,7 +17,9 @@ Module modLib
     End Function
 
     Public Function rm_truecrypt(path As String)
-        rm("C:\Program Files\TrueCrypt\")
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        rm(szProgramFilesPath & "\TrueCrypt\")
         Return Nothing
     End Function
 

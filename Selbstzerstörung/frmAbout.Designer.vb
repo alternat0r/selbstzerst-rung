@@ -25,13 +25,13 @@ Partial Class frmAbout
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
         Me.btnOk = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,6 +59,15 @@ Partial Class frmAbout
         Me.GroupBox1.Size = New System.Drawing.Size(316, 137)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Selbstzerstörung.My.Resources.Resources._48x48
+        Me.PictureBox1.Location = New System.Drawing.Point(19, 16)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(51, 50)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'Label5
         '
@@ -114,15 +123,6 @@ Partial Class frmAbout
         Me.Label1.Size = New System.Drawing.Size(229, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Copyright © 2014. alternat0r. Alll right reserved."
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Selbstzerstörung.My.Resources.Resources._48x48
-        Me.PictureBox1.Location = New System.Drawing.Point(19, 16)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(51, 50)
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
         '
         'frmAbout
         '
