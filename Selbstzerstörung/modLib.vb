@@ -16,10 +16,17 @@ Module modLib
         Next
     End Function
 
-    Public Function rm_truecrypt(path As String)
+    Public Function rm_truecrypt()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
         rm(szProgramFilesPath & "\TrueCrypt\")
+        Return Nothing
+    End Function
+
+    Public Function rm_fdm()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        rm(szProgramFilesPath & "\Free Download Manager\")
         Return Nothing
     End Function
 
