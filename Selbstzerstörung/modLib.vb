@@ -100,7 +100,9 @@ Module modLib
     End Sub
 
     Public Function TerminateProgramList()
-        Dim array() As String = {"chrome", "firefox", "googledrivesync.exe", "skype.exe", "devenv.exe"}
+        Dim array() As String = {"chrome", "firefox", "googledrivesync.exe", _
+                                 "skype.exe", "devenv.exe", "notepad.exe", _
+                                 "quassel.exe", "fdm.exe", "Battle.net Launcher.exe"}
         For Each Val As String In array
             kill_proc(Val)
         Next
