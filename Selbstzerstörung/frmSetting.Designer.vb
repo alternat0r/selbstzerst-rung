@@ -60,12 +60,16 @@ Partial Class frmSetting
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.ctxSchedule.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.ctxSoftwareName.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -379,11 +383,43 @@ Partial Class frmSetting
         Me.Label2.Text = "This part allow you to destroy certain software installed on your machine. Tick a" & _
     "ny listed software to enable."
         '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.CheckBox2)
+        Me.GroupBox5.Controls.Add(Me.CheckBox1)
+        Me.GroupBox5.Location = New System.Drawing.Point(671, 18)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(273, 395)
+        Me.GroupBox5.TabIndex = 6
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "General"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(15, 21)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(144, 17)
+        Me.CheckBox1.TabIndex = 0
+        Me.CheckBox1.Text = "Enable System Tray Icon"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.Location = New System.Drawing.Point(15, 44)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(252, 28)
+        Me.CheckBox2.TabIndex = 1
+        Me.CheckBox2.Text = "CTLR+ALT+SHIFT+INSERT  to reveal main window."
+        Me.CheckBox2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'frmSetting
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(677, 459)
+        Me.ClientSize = New System.Drawing.Size(956, 459)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnSave)
@@ -403,6 +439,8 @@ Partial Class frmSetting
         Me.ctxSchedule.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.ctxSoftwareName.ResumeLayout(False)
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -442,4 +480,7 @@ Partial Class frmSetting
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtTimeCheckin As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
 End Class
