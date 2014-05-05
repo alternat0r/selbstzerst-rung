@@ -61,8 +61,8 @@ Partial Class frmSetting
         Me.DeselectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -394,6 +394,16 @@ Partial Class frmSetting
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "General"
         '
+        'CheckBox2
+        '
+        Me.CheckBox2.Location = New System.Drawing.Point(15, 44)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(252, 35)
+        Me.CheckBox2.TabIndex = 1
+        Me.CheckBox2.Text = "CTLR+ALT+SHIFT+INSERT  to reveal main window."
+        Me.CheckBox2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
@@ -403,16 +413,6 @@ Partial Class frmSetting
         Me.CheckBox1.TabIndex = 0
         Me.CheckBox1.Text = "Enable System Tray Icon"
         Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.Location = New System.Drawing.Point(15, 44)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(252, 28)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "CTLR+ALT+SHIFT+INSERT  to reveal main window."
-        Me.CheckBox2.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'frmSetting
         '
